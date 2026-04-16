@@ -11,4 +11,7 @@ FOREIGN KEY(id_roles)REFERENCES roles(id_roles));
 SELECT * FROM users;
 CREATE TABLE courses(id_courses INT AUTO_INCREMENT PRIMARY KEY ,
 title VARCHAR(50),
-)
+description text ,
+id_prof INT,
+Foreign Key (id_prof) REFERENCES users (id_users))
+
