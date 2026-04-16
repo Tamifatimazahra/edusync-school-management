@@ -13,5 +13,19 @@ CREATE TABLE courses(id_courses INT AUTO_INCREMENT PRIMARY KEY ,
 title VARCHAR(50),
 description text ,
 id_prof INT,
-Foreign Key (id_prof) REFERENCES users (id_users))
+Foreign Key (id_prof) REFERENCES users (id_users));
+ALTER TABLE roles
+MODIFY label VARCHAR (50) NOT NULL;
+ALTER TABLE users
+MODIFY firstname VARCHAR(50) NOT NULL,
+MODIFY lastname VARCHAR(50) NOT NULL;
+ALTER TABLE courses
+MODIFY title VARCHAR(50) NOT NULL;
+ALTER TABLE users
+ADD email VARCHAR (100) NOT NULL UNIQUE;
+SELECT * from users;
+
+
+
+
 
